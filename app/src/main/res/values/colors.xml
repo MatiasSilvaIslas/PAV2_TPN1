@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!-- Colors for Dark Mode -->
+    <color name="colorPrimaryDarkMode">#BB86FC</color> <!-- Color for Toolbar in Dark Mode -->
+    <color name="colorAccentDarkMode">#03DAC5</color>
+
 </resources>
