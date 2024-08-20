@@ -28,4 +28,8 @@ public class MainActivity extends AppCompatActivity {
         Intent ejercicio1 = new Intent(this, Ejercicio1.class);
         startActivity(ejercicio1);
     }
+    public void Ejercicio2(View vier){
+        Intent ejercicio2 = new Intent(this, Ejercicio2.class);
+        startActivity(ejercicio2);
+    }
 }

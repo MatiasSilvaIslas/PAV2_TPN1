@@ -16,6 +16,10 @@
             android:name=".Ejercicio1"
             android:exported="false" />
         <activity
+                android:name=".Ejercicio2"
+                android:label="@string/calculadora"
+                android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

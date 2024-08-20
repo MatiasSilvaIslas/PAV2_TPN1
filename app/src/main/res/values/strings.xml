@@ -6,4 +6,5 @@
     <string name="ingresar_nro">Ingresar número</string>
     <string name="segundo_nro">Segundo Número:</string>
     <string name="primer_nro">Primer Número:</string>
+    <string name="calculadora">Calculadora</string>
 </resources>
