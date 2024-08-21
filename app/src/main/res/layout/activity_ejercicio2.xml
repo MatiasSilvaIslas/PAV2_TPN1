@@ -7,7 +7,7 @@
              android:accessibilityPaneTitle="@string/ejercicio_2"
 >
 
-    <!-- Fila para los TextView de resultados -->
+
     <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
             android:textSize="60sp" />
     </TableRow>
 
-    <!-- Fila 1: Botones 9, 8, 7, / -->
+
     <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -69,7 +69,7 @@
             android:textSize="16sp" />
     </TableRow>
 
-    <!-- Fila 2: Botones 6, 5, 4, * -->
+
     <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -101,7 +101,7 @@
 
     </TableRow>
 
-    <!-- Fila 3: Botones 3, 2, 1, + -->
+
     <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -133,7 +133,7 @@
 
     </TableRow>
 
-    <!-- Fila 4: Botones Clear, 0, =, - -->
+
     <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
