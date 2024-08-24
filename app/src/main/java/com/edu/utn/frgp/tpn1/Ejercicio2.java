@@ -124,10 +124,15 @@ public class Ejercicio2 extends AppCompatActivity {
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calcular();
-                accion = resta;
-                result.setText(String.valueOf(val1) + "-");
-                info.setText(null);
+                if (info.getText().toString().isEmpty()) {
+                    // Si no hay número en la pantalla, permite el ingreso de un número negativo
+                    info.setText("-");
+                } else {
+                    calcular();
+                    accion = resta;
+                    result.setText(String.valueOf(val1) + "-");
+                    info.setText(null);
+                }
             }
         });
 
@@ -230,6 +235,8 @@ public class Ejercicio2 extends AppCompatActivity {
                 case EQU:
                     break;
             }
+
+
         }
         else{
             val1 = Double.parseDouble(info.getText().toString());

@@ -33,7 +33,6 @@
             android:layout_marginRight="30sp"
             android:layout_span="4"
             android:maxLength="8"
-            android:text="0"
             android:textAlignment="textEnd"
             android:textSize="60sp" />
     </TableRow>
