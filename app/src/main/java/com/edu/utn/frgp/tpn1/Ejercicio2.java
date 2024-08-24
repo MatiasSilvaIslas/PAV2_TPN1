@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -219,6 +221,15 @@ public class Ejercicio2 extends AppCompatActivity {
         if(!Double.isNaN(val1)){
             val2 = Double.parseDouble(info.getText().toString());
 
+            if (accion == dividir && val2 == 0) {
+                // Mostrar un Toast si se intenta dividir por 0
+                Toast.makeText(Ejercicio2.this, "Error: División por 0 no permitida", Toast.LENGTH_LONG).show();
+                info.setText(null);  // Limpiar la pantalla de entrada
+                result.setText(null);  // Limpiar el resultado
+                val1 = Double.NaN;  // Resetear val1 para evitar cálculos incorrectos
+                accion = EQU;  // Resetear la acción
+                return;  // Salir del método para evitar que continúe con el cálculo
+            }
             switch(accion){
                 case suma:
                     val1 = val1 + val2;
@@ -230,13 +241,11 @@ public class Ejercicio2 extends AppCompatActivity {
                     val1 = val1 * val2;
                     break;
                 case dividir:
-                    val1 = val1 / val2;
+                        val1 = val1 / val2;
                     break;
                 case EQU:
                     break;
             }
-
-
         }
         else{
             val1 = Double.parseDouble(info.getText().toString());
