@@ -14,11 +14,11 @@
             android:gravity="end">
 
         <TextView
-                android:id="@+id/tvResult"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="4"
-                android:textSize="40sp" />
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="4"
+            android:textSize="20sp" />
     </TableRow>
 
     <TableRow
@@ -33,6 +33,7 @@
             android:layout_marginRight="30sp"
             android:layout_span="4"
             android:maxLength="8"
+            android:text="0"
             android:textAlignment="textEnd"
             android:textSize="60sp" />
     </TableRow>
@@ -61,10 +62,11 @@
                 android:text="9" />
 
         <Button
-                android:id="@+id/btnadd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+" />
+            android:id="@+id/btnadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="16sp" />
     </TableRow>
 
     <!-- Fila 2: Botones 6, 5, 4, * -->
@@ -89,11 +91,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6" />
+
         <Button
-                android:id="@+id/btnsub"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-" />
+            android:id="@+id/btnsub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="16sp" />
 
     </TableRow>
 
@@ -119,11 +123,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3" />
+
         <Button
-                android:id="@+id/btnmul"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="*" />
+            android:id="@+id/btnmul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textSize="20sp" />
 
     </TableRow>
 
@@ -145,16 +151,18 @@
                 android:text="0" />
 
         <Button
-                android:id="@+id/btnequal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="=" />
+            android:id="@+id/btnequal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="20sp" />
 
         <Button
-                android:id="@+id/btndivide"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/" />
+            android:id="@+id/btndivide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="20sp" />
 
     </TableRow>
 
