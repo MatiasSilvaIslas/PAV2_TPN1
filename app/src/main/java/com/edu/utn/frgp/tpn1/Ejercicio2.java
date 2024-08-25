@@ -10,15 +10,22 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.BiFunction;
+
+import static java.lang.Double.NaN;
+
 public class Ejercicio2 extends AppCompatActivity {
     private Button cero, one, two, three, four, five, six, seven, eight, nine;
     private Button add, sub, mul, div, equal, borrar;
     private TextView info, result;
-    private double val1 = Double.NaN;
-    private double val2;
+    private double val1 = NaN;
+    private double val2=0;
     private char accion;
     private boolean isCalculating = false;
     private boolean isResultDisplayed = false;
+    private boolean negativo = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,11 +105,16 @@ public class Ejercicio2 extends AppCompatActivity {
         if (info.getText().toString().equals("0")) {
             info.setText(number);
         } else {
+
             info.setText(info.getText().toString() + number);
         }
     }
 
     private void handleOperatorInput(char operation) {
+        if(Double.isNaN(val1)&& operation=='-' && !negativo && info.getText().toString().isEmpty()){
+            negativo=true;
+            info.setText("-");
+        }else{
         if (isResultDisplayed) {
             Toast.makeText(Ejercicio2.this, "El resultado ya se ha mostrado. Ingrese una nueva operación.", Toast.LENGTH_SHORT).show();
             return;
@@ -118,6 +130,7 @@ public class Ejercicio2 extends AppCompatActivity {
             updateResult(String.valueOf(operation));
             info.setText("0");
         }
+        }
     }
 
     private void calculateResult() {
@@ -128,6 +141,9 @@ public class Ejercicio2 extends AppCompatActivity {
                 resetCalculator();
                 return;
             }
+
+
+
             switch (accion) {
                 case '+':
                     val1 += val2;
@@ -142,11 +158,18 @@ public class Ejercicio2 extends AppCompatActivity {
                     val1 /= val2;
                     break;
             }
+            if (Double.isNaN(val1)){
+                val1=val2;
+
+            }
             String expression = result.getText().toString() + formatResult(val2) + "=";
             result.setText(expression);
             info.setText(formatResult(val1));
             isResultDisplayed = true;
             isCalculating = false;
+            val1 = NaN;
+            negativo= false;
+
         } else {
             Toast.makeText(Ejercicio2.this, "Por favor ingrese un valor antes de calcular.", Toast.LENGTH_SHORT).show();
         }
@@ -165,10 +188,11 @@ public class Ejercicio2 extends AppCompatActivity {
     }
 
     private void resetCalculator() {
-        val1 = Double.NaN;
-        val2 = Double.NaN;
+        val1 = NaN;
+        val2 = 0;
+        negativo= false;
         result.setText("");
-        info.setText("0");
+        info.setText("");
         isCalculating = false;
         isResultDisplayed = false;
     }
@@ -180,4 +204,8 @@ public class Ejercicio2 extends AppCompatActivity {
             return String.format("%s", result);
         }
     }
+
+
+
+
 }
